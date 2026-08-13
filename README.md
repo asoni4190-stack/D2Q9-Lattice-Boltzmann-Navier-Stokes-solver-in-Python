@@ -1,0 +1,1 @@
+Inclined-plate aerodynamics (CFD): Implemented a from-scratch D2Q9 Lattice Boltzmann Navier–Stokes solver in Python; validated on the cylinder benchmark and analyzed drag/lift and vortex shedding on a 45° flat plate.
