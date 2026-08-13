@@ -10,7 +10,7 @@ U = float(d["U"]); L = 40.0; alpha = np.radians(45)
 h = L * np.sin(alpha)                     # frontal projected height
 steps = F[:, 0]
 
-# --- forces: body force = -(momentum imparted to fluid); ref = chord L ---
+#forces: body force = -(momentum imparted to fluid); ref = chord L 
 Fx = -F[:, 1]; Fy = -F[:, 2]
 m = steps > 8000
 qref = 0.5 * U**2 * L
@@ -31,7 +31,7 @@ print(f"  mean Cd = {Cd:.3f}   mean Cl = {Cl:.3f}")
 print(f"  Cd' rms = {Cd_f:.3f}   Cl' rms = {Cl_f:.3f}")
 print(f"  Strouhal (frontal height) St = {St:.3f}")
 
-# ---------------- figures ----------------
+# figures 
 X, Y = np.meshgrid(np.arange(nx), np.arange(ny), indexing="ij")
 w = np.ma.array(lbm.vorticity(u), mask=obs)
 speed = np.ma.array(np.sqrt(u[0]**2+u[1]**2), mask=obs)
